@@ -1,26 +1,23 @@
 document.addEventListener('DOMContentLoaded', function () {
-    new Swiper('.mySwiper', {
-        effect: 'cards',
-        grabCursor: true,
-        loop: true,
 
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
+new Swiper('.mySwiper', {
+effect: 'cards',
+grabCursor: true,
+loop: true,
 
-        keyboard: {
-            enabled: true,
-        },
+// IMPORTANT FIX (links work)
+preventClicks: false,
+preventClicksPropagation: false,
 
-        mousewheel: {
-            invert: false,
-        },
+keyboard: true,
+mousewheel: true,
 
-        cardsEffect: {
-            perSlideOffset: 12,
-            perSlideRotate: 3,
-            slideShadows: true,
-        },
-    });
+cardsEffect: {
+perSlideOffset: 10,
+perSlideRotate: 2,
+slideShadows: true
+}
+
+});
+
 });
